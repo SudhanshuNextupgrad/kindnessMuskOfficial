@@ -227,7 +227,7 @@ const About = () => {
                     social determinants. Lorem ipsum dolor sit amet, consectetur
                     adipiscing elit, sed do eiusmod tempor incididunt.
                   </p>
-                  <ul className="about_ul_li">
+                  {/* <ul className="about_ul_li">
                     {heathEquityData[0]?.description ? (
                       <li>{heathEquityData[0]?.description}</li>
                     ) : <li>No data</li>}
@@ -240,7 +240,7 @@ const About = () => {
                     {heathEquityData[3]?.description ? (
                       <li>{heathEquityData[3]?.description}</li>
                     ) : <li>No data</li>}
-                  </ul>
+                  </ul> */}
                 </div>
                 <div className="col-md-7 ">
                   <div className="about_video_1 text-center">
@@ -442,7 +442,7 @@ const About = () => {
                     student. This provides students the resources, teachers,
                     interventions and supports they need to be successful.
                   </p>
-                  <ul className="about_ul_li">
+                  {/* <ul className="about_ul_li">
                     {educationEquityData[0]?.description ? (
                       <li>{educationEquityData[0]?.description}</li>
                     ) : <li>No Data</li>}
@@ -455,7 +455,7 @@ const About = () => {
                     {educationEquityData[3]?.description ? (
                       <li>{educationEquityData[3]?.description}</li>
                     ) : <li>No Data</li>}
-                  </ul>
+                  </ul> */}
                 </div>
                 <div className="col-md-7 ">
                   <div className="about_video_1">
@@ -706,7 +706,7 @@ const About = () => {
                     careers and everyone who wants to work has access to
                     self-supporting and family supporting employment.
                   </p>
-                  <ul className="about_ul_li">
+                  {/* <ul className="about_ul_li">
                     {workforceEquityData[0]?.description ? (
                       <li>{workforceEquityData[0]?.description}</li>
                     ) : <li>No Data</li>}
@@ -719,7 +719,7 @@ const About = () => {
                     {workforceEquityData[3]?.description ? (
                       <li>{workforceEquityData[3]?.description}</li>
                     ) : <li>No Data</li>}
-                  </ul>
+                  </ul> */}
                 </div>
                 <div className="col-md-7">
                   <div className="about_video_1">
@@ -929,7 +929,7 @@ const About = () => {
                     services, implementation of policy and management of all
                     institutions serving the public directly or by contract.
                   </p>
-                  <ul className="about_ul_li">
+                  {/* <ul className="about_ul_li">
                     {publicEquityData[0]?.description ? (
                       <li>{publicEquityData[0]?.description}</li>
                     ) : <li>No Data</li>}
@@ -942,7 +942,7 @@ const About = () => {
                     {publicEquityData[3]?.description ? (
                       <li>{publicEquityData[3]?.description}</li>
                     ) : <li>No Data</li>}
-                  </ul>
+                  </ul> */}
                 </div>
                 <div className="col-md-7">
                   <div className="about_video_1">
