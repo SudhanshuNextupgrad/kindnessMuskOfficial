@@ -73,7 +73,7 @@ const Ourteam = () => {
                 return (
                   <div className={styles.person} onClick={() => toggleOverlay(item.column_1)} key={index}   style={{ transition: '.4s ease' }}>
 
-                    <img src={"https://kindnessbackend.azurewebsites.net/" + item.media} alt="image" />
+                    <img src={process.env.SITE_URL + item.media} alt="image" />
                     <div className={`${styles.personName} mb-1 w-100 text-center p-2`}>
                       <span className='mx-2'>{item.column_1}</span>
                       <FaArrowRightLong color="white" className={`${styles.arrow}`} />
