@@ -27,6 +27,7 @@ import TeamModal from "./components/ShowTeam";
 import { newsPageService } from "./../store/services/newsPageService";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import Ourteam from "./our-team";
 
 function MainPage({ metaData }) {
   const router = useRouter();
@@ -270,6 +271,7 @@ function MainPage({ metaData }) {
       params.sectionName = "DescAccomplishment";
       const response = await homePageService.homePageDescAccomp(params);
 
+      
       if (response?.data?.success) {
         let dataResp = response?.data?.data;
         let meetExeutiveData = dataResp.filter(
@@ -277,6 +279,7 @@ function MainPage({ metaData }) {
         );
 
         setMeetExeutive(meetExeutiveData);
+        // console.log("meet excuive data",meetExeutiveData);
       } else {
         setMeetExeutive([]);
       }
@@ -304,6 +307,9 @@ function MainPage({ metaData }) {
       console.log(error);
     }
   }
+  const showTeamData = () => {
+    setToggle(!toggle);
+  };
 
   return (
     <>
@@ -460,7 +466,7 @@ function MainPage({ metaData }) {
 
           <div className="container text-center">
             <h1 style={{color:"white"}} className="mt-5 hompageHeadings">Our Mission</h1>
-            <h4 className="home-main-heading-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. {MissionText}</h4>
+            <h4 className="home-main-heading-2">{MissionText}</h4>
           </div>
           <Image
             src={"/design-1.png"}
@@ -478,7 +484,7 @@ function MainPage({ metaData }) {
             <div className="row gy-12">
               <div className="col-lg-12 text-center">
                 <h2 style={{color:"#646F6E"}} className="mt-2 hompageHeadings ">Our Vision</h2>
-                <h4 className="home-main-heading-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <h4 className="home-main-heading-3">
                   {staticContent?.page_text}
                 </h4>
                 <div className="text-center">
@@ -568,7 +574,9 @@ function MainPage({ metaData }) {
                 <p>&nbsp;</p>
                 <h2>
                   {" "}
-                  <Link href="our-team" >
+                  <Link href="our-team" 
+                  // onClick={showTeamData}
+                   >
                     <u className="decriptions_wrap">
                       CLICK HERE to meet The Kindness Campaign TEAM!
                     </u>

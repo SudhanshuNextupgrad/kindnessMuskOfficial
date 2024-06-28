@@ -58,7 +58,9 @@
 }
 
 .person2 img {
-    height: 500px;
+    width:100%;
+    height: auto;
+   
 }
 
 .personName {
@@ -69,16 +71,16 @@
     
 }
 
-.personName:hover{
+/* .personName:hover{
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.65)));
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);;
     transition: height 0.4s ease-in-out;
-}
+} */
 
 .overlay {
     position: absolute;
     height: 0;
-    width: 91%;
+    width: 100%;
     background-color: #20242c;
     padding: 25px 15px;
     color: #fff;
@@ -89,7 +91,7 @@
 }
 
 .person .overlay{
-    height: 95.5%;
+    height: 100%;
     left: 0%;
 }
 
@@ -99,8 +101,8 @@
 
 .des{
     text-align: left;
-    overflow-y: scroll;
-    height: 280px;
+    overflow-y: auto;
+    height: 175px;
 }
 
 .title h5{
@@ -146,7 +148,7 @@
 
 .person img {
     width: 100%;
-    height: 500px;
+    height: auto;
 }
 
 .personName {
@@ -154,18 +156,23 @@
     color: #fff;
     margin-top: -60px;
     text-align: left;
+    cursor: pointer;
 }
 
-.personName:hover {
+/* .personName:hover {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.65)));
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
     transition: height 0.4s ease-in-out;
+    
+} */
+.arrow:hover{
+    margin-left:5px;
+    transition: margin-left 0.2s ease-in-out;
 }
-
 .overlay {
     position: absolute;
     height: 0;
-    width: 91%;
+    width: 100%;
     background-color: #20242c;
     padding: 25px 15px;
     color: #fff;
@@ -176,7 +183,7 @@
 }
 
 .person .overlay {
-    height: 95.5%;
+    height: 100%;
     left: 0%;
 }
 
@@ -186,8 +193,8 @@
 
 .des {
     text-align: left;
-    overflow-y: scroll;
-    height: 280px;
+    overflow-y: auto;
+    height: 175px;
 }
 
 .title h5 {
