@@ -311,7 +311,7 @@ const Get_involved = () => {
             toggle={toggle}
             settoggle={settoggle}
           />
-          
+
           <div className="container">
             <div className="event_wrap_main ">
               <div className="row">
@@ -342,161 +342,305 @@ const Get_involved = () => {
         </section>
 
         <section className="pt-0">
-          
+
           <div className="container">
             <div className="row">
-            <Image
-                                  src={
-                                    data2?.image
-                                      ? process.env.SITE_URL + data2?.image
-                                      : "/bg-video-banner.jpg"
-                                  }
-                                  height={300}
-                                  width={800}
-                                  alt="video-banner"
-                                  style={{ width: "100%", objectFit: "cover", height:"auto",border:"10px solid #88B6DE" }}
+              <div className="col text-center">
+                <Image
+                  src={
+                    data2?.image
+                      ? process.env.SITE_URL + data2?.image
+                      : "/bg-video-banner.jpg"
+                  }
+                  height={300}
+                  width={800}
+                  alt="video-banner"
+                  style={{ maxHeight: "500px", height: "auto", border: "10px solid #88B6DE" }}
+                />
+              </div>
+
+              <div className="col-md-12 col-lg-12 mt-4 getInvForm">
+                <div className="text-center w-75">
+                  <div className="get_involved_sidebar_1">
+                    <div className="container">
+                      <form className="donation_form">
+                        <h3
+                          className="event_categories_wrap text-center"
+                          style={{ fontSize: "15pt" }}
+                        >
+                          Support Our Cause
+                        </h3>
+                        <h3
+                          className="event_categories_wrap text-center"
+                          style={{ marginTop: "-5px", marginBottom: 20 }}
+                        >
+                          {" "}
+                          LEAVE A DONATION
+                        </h3>
+
+                        <div className="mb-3">
+                          <textarea
+                            className="form-control donation_form_text"
+                            id="Textarea1"
+                            placeholder="What Inspired You To Give? *"
+                            rows="3"
+                            value={donationMessage}
+                            onChange={(e) => setDonationMessage(e?.target?.value)}
+                          ></textarea>
+                        </div>
+
+                        <div className="container">
+                          <div className="row">
+                            <div className="col-md-12 col-lg-4 text-center">
+                              <label
+                                htmlFor="exampleFormControlInput1"
+                                className="form-label"
+                              >
+                                Select Gift Amount: *
+                              </label>
+                            </div>
+                            <div className="col-md-12 col-lg-4">
+                              <div className="form-check">
+                                <input
+                                  className="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault1"
+                                  onChange={(e) => addDefaultAmonut(e, 1000)}
                                 />
-              <div className="col-md-12 col-lg-12 mt-4">
-                <div className="get_involved_sidebar_1">
-                  <div className="container">
-                    <form className="donation_form">
-                      <h3
-                        className="event_categories_wrap text-center"
-                        style={{ fontSize: "15pt" }}
-                      >
-                        Support Our Cause
-                      </h3>
-                      <h3
-                        className="event_categories_wrap text-center"
-                        style={{ marginTop: "-5px", marginBottom: 20 }}
-                      >
-                        {" "}
-                        LEAVE A DONATION
-                      </h3>
+                                <label
+                                  className="form-check-label label_radio"
+                                  htmlFor="flexRadioDefault1"
+                                >
+                                  $1,000
+                                </label>
+                              </div>
 
-                      <div className="mb-3">
-                        <textarea
-                          className="form-control donation_form_text"
-                          id="Textarea1"
-                          placeholder="What Inspired You To Give? *"
-                          rows="3"
-                          value={donationMessage}
-                          onChange={(e) => setDonationMessage(e?.target?.value)}
-                        ></textarea>
-                      </div>
-
-                      <div className="container">
-                        <div className="row">
-                          <label
-                            htmlFor="exampleFormControlInput1"
-                            className="form-label"
-                          >
-                            Select Gift Amount: *
-                          </label>
-                          <div className="col-md-12 col-lg-6">
-                            <div className="form-check">
-                              <input
-                                className="form-check-input"
-                                type="radio"
-                                name="flexRadioDefault"
-                                id="flexRadioDefault1"
-                                onChange={(e) => addDefaultAmonut(e, 1000)}
-                              />
-                              <label
-                                className="form-check-label label_radio"
-                                htmlFor="flexRadioDefault1"
-                              >
-                                $1,000
-                              </label>
+                              <div className="form-check">
+                                <input
+                                  className="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault2"
+                                  defaultChecked=""
+                                  onChange={(e) => addDefaultAmonut(e, 250)}
+                                />
+                                <label
+                                  className="form-check-label label_radio"
+                                  htmlFor="flexRadioDefault2"
+                                >
+                                  $250
+                                </label>
+                              </div>
                             </div>
 
-                            <div className="form-check">
-                              <input
-                                className="form-check-input"
-                                type="radio"
-                                name="flexRadioDefault"
-                                id="flexRadioDefault2"
-                                defaultChecked=""
-                                onChange={(e) => addDefaultAmonut(e, 250)}
-                              />
-                              <label
-                                className="form-check-label label_radio"
-                                htmlFor="flexRadioDefault2"
-                              >
-                                $250
-                              </label>
-                            </div>
-                          </div>
+                            <div className="col-md-12 col-lg-4">
+                              <div className="form-check">
+                                <input
+                                  className="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault3"
+                                  onChange={(e) => addDefaultAmonut(e, 500)}
+                                />
+                                <label
+                                  className="form-check-label label_radio"
+                                  htmlFor="flexRadioDefault3"
+                                >
+                                  $ 500
+                                </label>
+                              </div>
 
-                          <div className="col-md-12 col-lg-6">
-                            <div className="form-check">
-                              <input
-                                className="form-check-input"
-                                type="radio"
-                                name="flexRadioDefault"
-                                id="flexRadioDefault3"
-                                onChange={(e) => addDefaultAmonut(e, 500)}
-                              />
-                              <label
-                                className="form-check-label label_radio"
-                                htmlFor="flexRadioDefault3"
-                              >
-                                $ 500
-                              </label>
+                              <div className="form-check">
+                                <input
+                                  className="form-check-input"
+                                  type="radio"
+                                  name="flexRadioDefault"
+                                  id="flexRadioDefault4"
+                                  defaultChecked=""
+                                  value={100}
+                                  onChange={(e) => addDefaultAmonut(e, 100)}
+                                />
+                                <label
+                                  className="form-check-label label_radio"
+                                  htmlFor="flexRadioDefault4"
+                                >
+                                  $100
+                                </label>
+                              </div>
+                              <div className="form-check">
+                                <button
+                                  className="clearBtn"
+                                  onClick={handleClear}
+                                >
+                                  Clear
+                                </button>
+                              </div>
                             </div>
 
-                            <div className="form-check">
-                              <input
-                                className="form-check-input"
-                                type="radio"
-                                name="flexRadioDefault"
-                                id="flexRadioDefault4"
-                                defaultChecked=""
-                                value={100}
-                                onChange={(e) => addDefaultAmonut(e, 100)}
-                              />
-                              <label
-                                className="form-check-label label_radio"
-                                htmlFor="flexRadioDefault4"
-                              >
-                                $100
-                              </label>
-                            </div>
-                            <div className="form-check">
-                              <button
-                                className="clearBtn"
-                                onClick={handleClear}
-                              >
-                                Clear
-                              </button>
-                            </div>
+
                           </div>
                         </div>
-                      </div>
 
-                      <div className="mb-3">
+                        <div className="mb-3">
+                          <input
+                            type="number"
+                            className="donation_form_text"
+                            id="formGroupExampleInput"
+                            placeholder="Custom Gift Amount:"
+                            value={customAmount ? customAmount : ""}
+                            onChange={(e) => setCustomAmount(e?.target?.value)}
+                            disabled={customAmountDisable}
+                          />
+                          <div className="error">
+                            {!checkIsNumber(customAmount)
+                              ? "Please fill valid amount"
+                              : ""}
+                          </div>
+                        </div>
+                        <input
+                          type="text"
+                          className="donation_form_text"
+                          placeholder="Name"
+                          aria-label="Name *"
+                          value={donorName}
+                          onChange={(e) => setDonorName(e?.target?.value)}
+                        />
+
+                        <input
+                          type="email"
+                          className="donation_form_text"
+                          id="inputEmail"
+                          placeholder="Email *"
+                          value={donorEmail}
+                          onChange={(e) => setDonorEmail(e?.target?.value)}
+                        />
+
                         <input
                           type="number"
                           className="donation_form_text"
-                          id="formGroupExampleInput"
-                          placeholder="Custom Gift Amount:"
-                          value={customAmount ? customAmount : ""}
-                          onChange={(e) => setCustomAmount(e?.target?.value)}
-                          disabled={customAmountDisable}
+                          id="inputnumber"
+                          placeholder="Phone:"
+                          value={donorPhone}
+                          onChange={(e) => {
+                            e.target.value.length <= 10
+                              ? setDonorPhone(e?.target?.value)
+                              : showNotification(
+                                "Only 10 digits allowed for phone number",
+                                "Error"
+                              );
+                          }}
                         />
-                        <div className="error">
-                          {!checkIsNumber(customAmount)
-                            ? "Please fill valid amount"
-                            : ""}
+
+                        <textarea
+                          className="form-control donation_form_text"
+                          id="Textarea2"
+                          placeholder="Address: *"
+                          rows="3"
+                          value={donorAddress}
+                          onChange={(e) => setDonorAddress(e?.target?.value)}
+                        ></textarea>
+
+                        <textarea
+                          className="form-control donation_form_text"
+                          id="Textarea3"
+                          placeholder="Gift Note:"
+                          rows="3"
+                          value={donorGiftNote}
+                          onChange={(e) => setDonorGiftNote(e?.target?.value)}
+                        ></textarea>
+                        <div className="text-center">
+                          {/*  <button
+                          type="button"
+                          className="btn btn-primary donate_btn"
+                        >
+                          Donate
+                        </button> */}
+
+                          <button
+                            type="button"
+                            onClick={createCheckOutSession}
+                            className="btn btn-primary donate_btn"
+                          >
+                            {loading ? "Processing..." : "Donate"}
+                          </button>
                         </div>
+
+                        <img
+                          src="../patment-img.png"
+                          alt="image"
+                          className="rounded mx-auto d-block mt-4"
+                        />
+                      </form>
+                    </div>
+
+                    <div className="container text-center mt-5">
+                      <div>
+                        <Image
+                          src={
+                            data4?.zelle_image
+                              ? process.env.SITE_URL + data4?.zelle_image
+                              : "/bg-video-banner.jpg"
+                          }
+                          width={250}
+                          height={150}
+                          alt={data4?.zelle_text}
+                        />
                       </div>
+
+                      <p className="fst_wrap text-center">
+                        {data4?.zelle_text}
+                        <br />
+                        the email{" "}
+                        <Link href={`mailto:${data4?.mailing_text}`}>
+                          {data4?.mailing_text}
+                        </Link>
+                      </p>
+
+                      <div>
+
+                        <Image
+                          src={
+                            data4?.cash_app_image
+                              ? process.env.SITE_URL + data4?.cash_app_image
+                              : "/bg-video-banner.jpg"
+                          }
+                          width={250}
+                          height={150}
+                          alt={data4?.cash_app_text}
+                        />
+                      </div>
+
+
+                      <p className="fst_wrap text-center">
+                        {data4?.cash_app_text}
+                      </p>
+
+                      <p className="fst_wrap text-center">
+                        <b>
+                          The Kindness Campaign <br />
+                          703 E 75th St
+                          <br />
+                          Chicago, IL 60619 - 1907
+                        </b>
+                      </p>
+                    </div>
+
+                    <div className="donation_form">
+                      {/* <h3 className="event_categories_wrap text-center">
+                      LEARN MORE
+                    </h3> */}
+                      <h3 className="event_categories_wrap text-center">
+                        {data3?.section_post}
+                      </h3>
+
                       <input
                         type="text"
                         className="donation_form_text"
                         placeholder="Name"
                         aria-label="Name *"
-                        value={donorName}
-                        onChange={(e) => setDonorName(e?.target?.value)}
+                        value={name}
+                        onChange={(e) => setname(e.target.value)}
                       />
 
                       <input
@@ -504,220 +648,95 @@ const Get_involved = () => {
                         className="donation_form_text"
                         id="inputEmail"
                         placeholder="Email *"
-                        value={donorEmail}
-                        onChange={(e) => setDonorEmail(e?.target?.value)}
+                        onChange={(e) => setemail(e.target.value)}
+                        value={email}
                       />
 
                       <input
-                        type="number"
+                        type="phone"
                         className="donation_form_text"
                         id="inputnumber"
                         placeholder="Phone:"
-                        value={donorPhone}
+                        value={phone}
                         onChange={(e) => {
-                          e.target.value.length <= 10
-                            ? setDonorPhone(e?.target?.value)
+                          e?.target?.value?.length < 11
+                            ? setphone(e?.target?.value)
                             : showNotification(
-                                "Only 10 digits allowed for phone number",
-                                "Error"
-                              );
-                        }}
-                      />
-
-                      <textarea
-                        className="form-control donation_form_text"
-                        id="Textarea2"
-                        placeholder="Address: *"
-                        rows="3"
-                        value={donorAddress}
-                        onChange={(e) => setDonorAddress(e?.target?.value)}
-                      ></textarea>
-
-                      <textarea
-                        className="form-control donation_form_text"
-                        id="Textarea3"
-                        placeholder="Gift Note:"
-                        rows="3"
-                        value={donorGiftNote}
-                        onChange={(e) => setDonorGiftNote(e?.target?.value)}
-                      ></textarea>
-                      <div className="text-center">
-                        {/*  <button
-                          type="button"
-                          className="btn btn-primary donate_btn"
-                        >
-                          Donate
-                        </button> */}
-
-                        <button
-                          type="button"
-                          onClick={createCheckOutSession}
-                          className="btn btn-primary donate_btn"
-                        >
-                          {loading ? "Processing..." : "Donate"}
-                        </button>
-                      </div>
-
-                      <img
-                        src="../patment-img.png"
-                        alt="image"
-                        className="rounded mx-auto d-block mt-4"
-                      />
-                    </form>
-                  </div>
-
-                  <div className="container text-center mt-5">
-                    <Image
-                      src={
-                        data4?.zelle_image
-                          ? process.env.SITE_URL + data4?.zelle_image
-                          : "/bg-video-banner.jpg"
-                      }
-                      width={70}
-                      height={35}
-                      alt={data4?.zelle_text}
-                    />
-                    <p className="fst_wrap text-center">
-                      {data4?.zelle_text}
-                      <br />
-                      the email{" "}
-                      <Link href={`mailto:${data4?.mailing_text}`}>
-                        {data4?.mailing_text}
-                      </Link>
-                    </p>
-
-                    <Image
-                      src={
-                        data4?.cash_app_image
-                          ? process.env.SITE_URL + data4?.cash_app_image
-                          : "/bg-video-banner.jpg"
-                      }
-                      width={250}
-                      height={230}
-                      alt={data4?.cash_app_text}
-                    />
-
-                    <p className="fst_wrap text-center">
-                      {data4?.cash_app_text}
-                    </p>
-
-                    <p className="fst_wrap text-center">
-                      <b>
-                        The Kindness Campaign <br />
-                        703 E 75th St
-                        <br />
-                        Chicago, IL 60619 - 1907
-                      </b>
-                    </p>
-                  </div>
-
-                  <div className="donation_form">
-                    {/* <h3 className="event_categories_wrap text-center">
-                      LEARN MORE
-                    </h3> */}
-                    <h3 className="event_categories_wrap text-center">
-                      {data3?.section_post}
-                    </h3>
-
-                    <input
-                      type="text"
-                      className="donation_form_text"
-                      placeholder="Name"
-                      aria-label="Name *"
-                      value={name}
-                      onChange={(e) => setname(e.target.value)}
-                    />
-
-                    <input
-                      type="email"
-                      className="donation_form_text"
-                      id="inputEmail"
-                      placeholder="Email *"
-                      onChange={(e) => setemail(e.target.value)}
-                      value={email}
-                    />
-
-                    <input
-                      type="phone"
-                      className="donation_form_text"
-                      id="inputnumber"
-                      placeholder="Phone:"
-                      value={phone}
-                      onChange={(e) => {
-                        e?.target?.value?.length < 11
-                          ? setphone(e?.target?.value)
-                          : showNotification(
                               "Only 10 digits allowed for phone number",
                               "Error"
                             );
-                      }}
-                    />
-
-                    <label
-                      htmlFor="exampleFormControlInput1"
-                      className="form-label"
-                    >
-                      Interest: *
-                    </label>
-                    <ul className="fix-radio" style={{ display: "grid" }}>
-                      {interestList?.length
-                        ? interestList?.map((item, index) => (
-                            <div className="event_intrest" key={index}>
-                              <input
-                                className=" label_radio "
-                                type="radio"
-                                value={item?.id}
-                                name="radio-group"
-                                id="flexCheckDefault_1"
-                                checked={
-                                  selectedOption == item?.id ? true : false
-                                }
-                                onChange={handleRadioChange}
-                              />
-                              &nbsp;
-                              <label
-                                className="form-check-label label_radio"
-                                htmlFor="flexCheckDefault_1"
-                              >
-                                {" "}
-                                {item?.interest_type}{" "}
-                              </label>
-                            </div>
-                          ))
-                        : ""}
-                    </ul>
-
-                    <textarea
-                      className="form-control donation_form_text "
-                      id="Textarea6"
-                      placeholder="Message:"
-                      rows="3"
-                      value={msg}
-                      onChange={(e) => setmsg(e.target.value)}
-                    ></textarea>
-
-                    <div className="text-center">
-                      {loaderStatus ? (
-                        <Spinner
-                          style={{
-                            width: "30px",
-                            height: "30px",
-                            color: "#0a1c51fc",
-                          }}
-                          animation="border"
-                        />
-                      ) : (
-                        <button
-                          type="submit"
-                          className="btn btn-primary donate_btn"
-                          onClick={postLearnMore}
+                        }}
+                      />
+                      <div className="d-flex justify-content-around">
+                        <label
+                          htmlFor="exampleFormControlInput1"
+                          className="form-label"
                         >
-                          SEND
-                        </button>
-                      )}
+                          Interest: *
+                        </label>
+                        <ul className="fix-radio" style={{ width:"50%" ,justifyContent:'space-evenly'}}>
+                          {interestList?.length
+                            ? interestList?.map((item, index) => (
+                              <div className="event_intrest" key={index}>
+                                <input
+                                  className=" label_radio "
+                                  type="radio"
+                                  value={item?.id}
+                                  name="radio-group"
+                                  id="flexCheckDefault_1"
+                                  checked={
+                                    selectedOption == item?.id ? true : false
+                                  }
+                                  onChange={handleRadioChange}
+                                />
+                                &nbsp;
+                                <label
+                                  className="form-check-label label_radio"
+                                  htmlFor="flexCheckDefault_1"
+                                >
+                                  {" "}
+                                  {item?.interest_type}{" "}
+                                </label>
+                              </div>
+                            ))
+                            : ""}
+                        </ul>
+                      </div>
+
+
+                      <textarea
+                        className="form-control donation_form_text "
+                        id="Textarea6"
+                        placeholder="Message:"
+                        rows="3"
+                        value={msg}
+                        onChange={(e) => setmsg(e.target.value)}
+                      ></textarea>
+
+                      <div className="text-center">
+                        {loaderStatus ? (
+                          <Spinner
+                            style={{
+                              width: "30px",
+                              height: "30px",
+                              color: "#0a1c51fc",
+                            }}
+                            animation="border"
+                          />
+                        ) : (
+                          <button
+                            type="submit"
+                            className="btn btn-primary donate_btn"
+                            onClick={postLearnMore}
+                          >
+                            SEND
+                          </button>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
+
               </div>
 
               {/* Sidebar End */}

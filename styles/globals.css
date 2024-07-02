@@ -2859,6 +2859,7 @@ section {
   border-radius: 12px;
 }
 
+
 .support {
   color: #838384;
   font-family: "Maven Pro", sans-serif;
@@ -3822,6 +3823,11 @@ input[type="text"]:hover {
     display: block;
   }
 }
+@media only screen and (max-width: 643px){
+  .p-4{
+
+  }
+}
 
 @media (max-width: 512px) {
   .react-tabs li {
@@ -4729,7 +4735,7 @@ input[type="text"]:hover {
   }
 
   .p-4 {
-    padding: 3rem 8rem 3rem 8rem !important;
+    padding: 0;
   }
 }
 
@@ -4848,4 +4854,9 @@ input[type="text"]:hover {
   font-family: "Maven Pro", sans-serif;
   font-weight: 600;
  
+}
+.getInvForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
