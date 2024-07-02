@@ -105,7 +105,7 @@ const ContactUs = () => {
         }
       } catch (err) {
         console.log("err", err);
-        showNotification(resp?.data?.success, "Error");
+        showNotification("Data not fetched", "Error");
       }
       setIsSubmitingLoader(false);
     } else {
@@ -451,7 +451,7 @@ const ContactUs = () => {
                       </label>
                       <div className="form-outline">
                         <input
-                          type="phone"
+                          type="text"
                           className="form-control reduceFont"
                           name="phone"
                           value={phone}
