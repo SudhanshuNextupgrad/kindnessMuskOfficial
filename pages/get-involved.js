@@ -601,7 +601,7 @@ const Get_involved = () => {
                       <p className="fst_wrap text-center">
                         {data4?.zelle_text}
                         <br />
-                        The email{" "}
+                       
                         <Link href={`mailto:${data4?.mailing_text}`}>
                           {data4?.mailing_text}
                         </Link>
