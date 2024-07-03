@@ -164,7 +164,7 @@ const Events = () => {
                       </li>
                       <li>
                         <Link
-                          href="https://www.facebook.com/Show.Kindness.Everyday/ "
+                          href="https://www.linkdin.com/ "
                           target="_blank"
                         >
                           LinkedIn
@@ -178,7 +178,7 @@ const Events = () => {
                       </li>
                       <li>
                         <Link
-                          href="https://www.youtube.com/c/TheKindnessCampaign "
+                          href="https://www.instagra.com/showkindnesseveryday "
                           target="_blank"
                         >
                           YouTube

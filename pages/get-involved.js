@@ -355,7 +355,10 @@ const Get_involved = () => {
                   height={300}
                   width={800}
                   alt="video-banner"
-                  style={{ maxHeight: "500px", height: "auto", border: "10px solid #88B6DE" }}
+                  style={{
+                    maxWidth: "330px",
+                    maxHeight: "307px", height: "auto", width: "100%", border: "10px solid #88B6DE"
+                  }}
                 />
               </div>
 
@@ -371,8 +374,8 @@ const Get_involved = () => {
                           Support Our Cause
                         </h3>
                         <h3
-                          className="event_categories_wrap text-center"
-                          style={{ marginTop: "-5px", marginBottom: 20 }}
+                          className="event_categories_wrap text-center mb-3 mt-2"
+                          style={{}}
                         >
                           {" "}
                           LEAVE A DONATION
@@ -394,7 +397,7 @@ const Get_involved = () => {
                             <div className="col-md-12 col-lg-4 text-center">
                               <label
                                 htmlFor="exampleFormControlInput1"
-                                className="form-label"
+                                className="form-label giftamttext"
                               >
                                 Select Gift Amount: *
                               </label>
@@ -565,12 +568,18 @@ const Get_involved = () => {
                             {loading ? "Processing..." : "Donate"}
                           </button>
                         </div>
+                        <div className="text-center mt-2">
+                          <img
+                            src="../patment-img.png"
+                            alt="image"
+                            className="  paymentcards"
+                            style={{ width: "100%" }}
 
-                        <img
-                          src="../patment-img.png"
-                          alt="image"
-                          className="rounded mx-auto d-block mt-4"
-                        />
+                          />
+                        </div>
+
+
+
                       </form>
                     </div>
 
@@ -585,13 +594,14 @@ const Get_involved = () => {
                           width={250}
                           height={150}
                           alt={data4?.zelle_text}
+                          className="border zelleImg"
                         />
                       </div>
 
                       <p className="fst_wrap text-center">
                         {data4?.zelle_text}
                         <br />
-                        the email{" "}
+                        The email{" "}
                         <Link href={`mailto:${data4?.mailing_text}`}>
                           {data4?.mailing_text}
                         </Link>
@@ -608,6 +618,8 @@ const Get_involved = () => {
                           width={250}
                           height={150}
                           alt={data4?.cash_app_text}
+                          style={{height:"auto"}}
+                          className="qrCode"
                         />
                       </div>
 
@@ -667,14 +679,14 @@ const Get_involved = () => {
                             );
                         }}
                       />
-                      <div className="d-flex justify-content-around">
+                      <div className="d-flex justify-content-between m-3">
                         <label
                           htmlFor="exampleFormControlInput1"
-                          className="form-label"
+                          className="form-label giftamttext"
                         >
                           Interest: *
                         </label>
-                        <ul className="fix-radio" style={{ width:"50%" ,justifyContent:'space-evenly'}}>
+                        <ul className="fix-radio" style={{ width: "50%", justifyContent: 'space-evenly' }}>
                           {interestList?.length
                             ? interestList?.map((item, index) => (
                               <div className="event_intrest" key={index}>
@@ -974,18 +986,24 @@ const Get_involved = () => {
               <ul className=" row sponsors_wrap_row sponsorList">
                 {sponsorPartnerData?.map((sponsItem, index) => {
                   return (
-                    <li className="col" key={randomKey()}>
-                      <Image
-                        src={
-                          sponsItem?.media
-                            ? process.env.SITE_URL + sponsItem?.media
-                            : "clients/client-1.png"
-                        }
-                        width={224}
-                        height={115}
-                        alt={sponsItem?.title}
-                        className="img-fluid"
-                      />
+
+                    <li className="col-12 col-sm-6 col-md-4 col-lg-2" key={randomKey()}>
+                      {console.log("sponsers data", sponsorPartnerData)}
+                     
+                        <Image
+                          src={
+                            sponsItem?.media
+                              ? process.env.SITE_URL + sponsItem?.media
+                              : "clients/client-1.png"
+                          }
+                          width={224}
+                          height={115}
+                          alt={sponsItem?.title}
+                          className="img-fluid "
+                          style={{ width: "100%", height: "auto" }}
+                        />
+                     
+
                     </li>
                   );
                 })}

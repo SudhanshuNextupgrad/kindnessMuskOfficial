@@ -881,9 +881,9 @@ input:focus {
   color: #012550;
 }
 
-.users a:hover {
+/* .users a:hover {
   color: #ff651f;
-}
+} */
 .upload_container .col-md-3 {
   -ms-flex: 0 0 25%;
   flex: 0 0 25%;

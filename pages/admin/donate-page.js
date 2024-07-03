@@ -126,12 +126,15 @@ const DonatePage = () => {
         formData.append("donateMedia", img);
       }
       try {
+        
         const resp = await getDonatePageSevices.updateDonateSection(formData);
+        const data2 = await resp.json();
+        
         donationMediaPreviewImages();
         dynamicData();
         showNotification("Data Saved Successfully", "Success");
       } catch (err) {
-        // Handle any other errors that may occur during the request
+        
         console.log(err);
       }
     } else if (data == "section2") {
