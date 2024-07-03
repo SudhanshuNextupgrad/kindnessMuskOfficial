@@ -350,7 +350,7 @@ const Get_involved = () => {
                   src={
                     data2?.image
                       ? process.env.SITE_URL + data2?.image
-                      : "/bg-video-banner.jpg"
+                      : "/logo.png"
                   }
                   height={300}
                   width={800}
@@ -589,7 +589,7 @@ const Get_involved = () => {
                           src={
                             data4?.zelle_image
                               ? process.env.SITE_URL + data4?.zelle_image
-                              : "/bg-video-banner.jpg"
+                              : "/logo.png"
                           }
                           width={250}
                           height={150}
@@ -613,7 +613,7 @@ const Get_involved = () => {
                           src={
                             data4?.cash_app_image
                               ? process.env.SITE_URL + data4?.cash_app_image
-                              : "/bg-video-banner.jpg"
+                              : "/logo.png"
                           }
                           width={250}
                           height={150}
@@ -988,13 +988,11 @@ const Get_involved = () => {
                   return (
 
                     <li className="col-12 col-sm-6 col-md-4 col-lg-2" key={randomKey()}>
-                      {console.log("sponsers data", sponsorPartnerData)}
-                     
                         <Image
                           src={
                             sponsItem?.media
                               ? process.env.SITE_URL + sponsItem?.media
-                              : "clients/client-1.png"
+                              : "/logo.png"
                           }
                           width={224}
                           height={115}

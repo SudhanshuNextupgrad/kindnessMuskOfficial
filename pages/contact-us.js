@@ -174,11 +174,11 @@ const Events = () => {
 
                     <ul>
                       <li>
-                        <Link href="#">Instagram</Link>
+                        <Link href="https://www.instagra.com/showkindnesseveryday" target="_blank">Instagram</Link>
                       </li>
                       <li>
                         <Link
-                          href="https://www.instagra.com/showkindnesseveryday "
+                          href="https://www.youtube.com/c/TheKindnessCampaign "
                           target="_blank"
                         >
                           YouTube
