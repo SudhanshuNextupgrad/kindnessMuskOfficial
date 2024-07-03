@@ -594,7 +594,7 @@ const Get_involved = () => {
                           width={250}
                           height={150}
                           alt={data4?.zelle_text}
-                          className="border zelleImg"
+                          className=" zelleImg"
                         />
                       </div>
 
