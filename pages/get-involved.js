@@ -366,7 +366,7 @@ const Get_involved = () => {
                 <div className="text-center w-75">
                   <div className="get_involved_sidebar_1">
                     <div className="container">
-                      <form className="donation_form">
+                      <form className="donation_form ">
                         <h3
                           className="event_categories_wrap text-center"
                           style={{ fontSize: "15pt" }}
@@ -638,7 +638,7 @@ const Get_involved = () => {
                       </p>
                     </div>
 
-                    <div className="donation_form">
+                    <div className="donation_form ms-3 mx-3">
                       {/* <h3 className="event_categories_wrap text-center">
                       LEARN MORE
                     </h3> */}
