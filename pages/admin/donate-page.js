@@ -128,7 +128,7 @@ const DonatePage = () => {
       try {
         console.log("data1 done");
         const resp = await getDonatePageSevices.updateDonateSection(formData);
-        const data2 = await resp.json();
+        // const data2 = await resp.json();
         console.log("data2",resp);
 
         donationMediaPreviewImages();
