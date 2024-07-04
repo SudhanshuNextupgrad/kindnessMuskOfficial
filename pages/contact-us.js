@@ -6,6 +6,7 @@ import ImageSlider from "./components/admin/ImageSlider";
 import showNotification from "@/helpers/show_notification";
 import Link from "next/link";
 import { Spinner } from "react-bootstrap";
+// sdf
 
 const Events = () => {
   const [data, setdata] = useState("");
