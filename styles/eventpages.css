@@ -239,6 +239,8 @@
 .donation_form {
   border: 2px solid #d0d0d0;
   padding: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .donation_form_text {
@@ -304,6 +306,7 @@
   margin-top: 0.3rem;
   margin-left: 1rem !important;
 }
+
 .form-check-input2 {
   position: absolute;
   margin-top: 0.3rem;

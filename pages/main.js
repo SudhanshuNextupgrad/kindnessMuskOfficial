@@ -576,6 +576,7 @@ function MainPage({ metaData }) {
                   {" "}
                   <Link href="our-team" 
                   // onClick={showTeamData}
+                  target="_blank"
                    >
                     <u className="decriptions_wrap">
                       CLICK HERE to meet The Kindness Campaign TEAM!
@@ -1874,7 +1875,7 @@ function MainPage({ metaData }) {
                   <Image
                     src="news-title-1.png"
                     width={0}
-                    height={0}
+                    height={200}
                     alt="news-title-3"
                     sizes="100vw"
                     className="news_title_1"
@@ -1888,15 +1889,15 @@ function MainPage({ metaData }) {
                     </p>
                   </Link>
                 </div>
-                &nbsp;
-                <div className="col-md-12 ">
+               
+                <div className="col-md-12 pt-4">
                   <Image
                     src="news-title-2.png"
                     width={0}
                     height={0}
                     alt="news-title-3"
                     sizes="100vw"
-                    style={{ width: "100%", height: "auto" }}
+                    style={{ width: "100%", height: "200px" }}
                   />
                   <Link href="/get-involved/#partner" target="_blank">
                     <p className="get_kindness">
