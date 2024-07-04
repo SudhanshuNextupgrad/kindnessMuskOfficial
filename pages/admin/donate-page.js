@@ -129,7 +129,7 @@ const DonatePage = () => {
         
         const resp = await getDonatePageSevices.updateDonateSection(formData);
         const data2 = await resp.json();
-        
+        console.log("data2",data2);
         donationMediaPreviewImages();
         dynamicData();
         showNotification("Data Saved Successfully", "Success");
